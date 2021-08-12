@@ -11,3 +11,7 @@ While I am proud of these projects, I would like to improve the Personal Portfol
 ## Takeaway
 
 While I feel very comfortable working with HTML/CSS, I really need to learn more about modern styles/trends.
+
+## Certificate
+
+https://freecodecamp.org/certification/nathanhotchkiss/responsive-web-design
