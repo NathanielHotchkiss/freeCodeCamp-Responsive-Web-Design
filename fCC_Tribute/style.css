@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap");
+
+html,
+body {
+  font-size: 12px;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  margin-top: 0;
+}
+
+header {
+  min-height: 100vh;
+}
+
+#title {
+  font-style: bold;
+  font-size: 5rem;
+  text-align: center;
+  margin: 15% 0;
+}
+
+.accomplishments {
+  font-size: 1.275rem;
+  font-style: oblique;
+  text-align: center;
+  line-height: 5.5rem;
+}
+
+#img-div {
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#image {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#img-caption {
+  text-align: center;
+}
+
+#tribute-info {
+  text-align: left;
+  padding: 5vw;
+  font-size: 1.2rem;
+}
+
+a {
+  text-decoration: none;
+  font-style: italic;
+}
+
+a:visited {
+  color: #74638f;
+}
+
+.image {
+  margin: 5% 0;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  width: 100%;
+}
+
+.footer-div {
+  background-color: black;
+  position: relative;
+  margin-bottom: 0;
+  height: 8vh;
+}
+
+.footer-text {
+  padding: 2vh;
+  text-align: center;
+  font-style: oblique;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+
+@media only screen and (min-width: 992px) { 
+#title {
+  font-size: 6rem;
+  margin: 8% 0;
+}
+
+.accomplishments {
+  font-size: 2.2rem;
+}
+
+#tribute-info {
+  padding: 5% 15%;
+  font-size: 1.5rem;
+}
+.image {
+  margin: 20% 0;
+}
+}

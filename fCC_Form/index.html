@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Netflix Survey</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <h1 id="title">Netflix</h1>
+            <p id="description">
+                Please fill out this short survey to see how we are doing
+            </p>
+            <div class="form-container">
+                <form action="https://formspree.io/f/meqvjwgp" method="post" id="survey-form">
+                    <fieldset class="fieldset-general">
+                        <label for="name" id="name-label" class="general-label">Name</label>
+                        <input id="name" type="text" name="first-name" autofocus="on" placeholder="Enter your name"
+                            class="general" required />
+
+                        <label for="email" id="email-label" class="general-label">Email</label>
+                        <input id="email" type="email" name="email" placeholder="Enter your email" class="general"
+                            required />
+
+                        <label for="phone-number" id="number-label" class="general-label">Phone number</label>
+                        <input id="number" type="number" name="phone" pattern="\d{3}[\-]\d{3}[\-]\d{4}"
+                            placeholder="Enter your phone number as xxx-xxx-xxxx" class="general" min="10" max="10" />
+                    </fieldset>
+                    <label for="dropdown" id="dropdown-label">
+                        How long have you been using Netflix?
+                    </label>
+                    <br />
+                    <select id="dropdown" name="length-of-time" class="form-control" required>
+                        <option value="">Please choose an option</option>
+                        <option value="0-6">0-6 months</option>
+                        <option value="6-12">6-12 months</option>
+                        <option value="1-2">1-2 years</option>
+                        <option value="2-5">2-5 years</option>
+                        <option value="5+">5+ years</option>
+                    </select>
+                    <fieldset class="fieldset-categories">
+                        <p>Favorite Categories <small>(check all that apply)</small></p>
+                        <div>
+                            <input name="categories" value="action" type="checkbox" class="checkbox" checked />
+                            <label for="action">Action & Adventure</label>
+                        </div>
+
+                        <div>
+                            <input name="categories" value="anime" type="checkbox" class="checkbox" />
+                            <label for="anime">Anime</label>
+                        </div>
+
+                        <div>
+                            <input name="categories" value="family" type="checkbox" class="checkbox" />
+                            <label for="family">Children & Family</label>
+                        </div>
+
+                        <div>
+                            <input name="categories" value="classic" type="checkbox" class="checkbox" />
+                            <label for="classic">Classic</label>
+                        </div>
+
+                        <div>
+                            <input name="categories" value="comedies" type="checkbox" class="checkbox" />
+                            <label for="comedies">Comedies</label>
+                        </div>
+
+                        <div>
+                            <input name="categories" value="documentaries" type="checkbox" class="checkbox" />
+                            <label for="documentaries">Documentaries</label>
+                        </div>
+
+                        <div>
+                            <input name="categories" value="dramas" type="checkbox" class="checkbox" />
+                            <label for="dramas">Dramas</label>
+                        </div>
+
+                        <div>
+                            <input name="categories" value="horror" type="checkbox" class="checkbox" />
+                            <label for="horror">Horror</label>
+                        </div>
+
+                        <div>
+                            <input name="categories" value="romantic" type="checkbox" class="checkbox" />
+                            <label for="romantic">Romantic</label>
+                        </div>
+
+                        <div>
+                            <input name="categories" value="scifi" type="checkbox" class="checkbox" />
+                            <label for="scifi">Sci-fi & Fantasy</label>
+                        </div>
+
+                        <div>
+                            <input name="categories" value="sports" type="checkbox" class="checkbox" />
+                            <label for="sports">Sports</label>
+                        </div>
+
+                        <div>
+                            <input name="categories" value="thrillers" type="checkbox" class="checkbox" />
+                            <label for="thrillers">Thrillers</label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="user-recommend">
+                        <div>
+                            <p>How likely are you to recommend Netflix to a friend?
+                                <br />
+                                <small>(0 - not at all, 5 - very likely)</small>
+                            </p>
+                            <label class="input-label"><input name=" user-recommend" value="0" type="radio" />0</label>
+                            <label class="input-label"><input name=" user-recommend" value="1" type="radio" />1</label>
+                            <label class="input-label"><input name=" user-recommend" value="2" type="radio" />2</label>
+                            <label class="input-label"><input name=" user-recommend" value="3" type="radio" />3</label>
+                            <label class="input-label"><input name=" user-recommend" value="4" type="radio" />4</label>
+                            <label class="input-label"><input name=" user-recommend" value="5" type="radio" />5</label>
+                        </div>
+                    </fieldset>
+
+                    <label for="form-message">Additional comments or feedback</label>
+                    <textarea id="form-message" name="message" maxlength="500" required></textarea>
+
+                    <button id="submit" type="submit">Submit</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+</html>

@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  overflow: scroll;
+  -webkit-scroll-snap-type: y mandatory;
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  -webkit-scroll-snap-align: start;
+  scroll-snap-align: start;
+  scroll-margin-top: 150px;
+}
+
+body {
+  background-color: #f0f5f9;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.2rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  padding: 5% 0;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: #f6490d;
+}
+
+/* - - - - - Header - - - - - */
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #364e68;
+  position: fixed;
+  display: block;
+  top: 0 !important;
+  z-index: 1;
+  width: 100%;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  font-size: 1.2rem;
+  padding: 10px 0;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 2vw 0 0;
+  transition: transform 500ms;
+  will-change: transform;
+}
+
+nav ul li:last-child a {
+  margin-right: 0d;
+}
+
+nav ul li a:hover {
+  text-decoration: none;
+  color: #bdbdbd;
+  transform: translateY(5px);
+}
+
+/* - - - - - Welcome & About - - - - - */
+
+#welcome-section {
+  min-height: 100vh;
+  padding-top: 25vh;
+}
+
+.welcome-image {
+  min-width: 200px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#home {
+  margin-top: 5%;
+}
+
+/* - - - - - Services - - - - - */
+
+.services-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+}
+
+.services-p {
+  text-align: center;
+}
+
+/* - - - - - Project - - - - - */
+
+.project-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.project-tile {
+  margin-top: 10%;
+  margin-left: 5%;
+}
+
+.project-a {
+  color: #000;
+  text-decoration: none;
+}
+
+/* - - - - - Form - - - - - */
+
+.form-section {
+  margin: 5vh 0;
+}
+
+fieldset {
+  border: 0;
+  margin: 12% 0;
+}
+
+form label {
+  width: 100%;
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #000;
+  font-family: arial;
+}
+
+form input[type="text"] {
+  width: 100%;
+  color: #000;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+form textarea {
+  height: 10vh;
+  width: 100%;
+  color: #000;
+  font-size: 20px;
+  margin-bottom: 20px;
+  resize: none;
+}
+
+form button {
+  width: 50%;
+  padding: 10px 16px;
+  border: 0;
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+  background: #222831;
+  color: #fff;
+}
+
+#social-links {
+  margin: 5% 0;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.bi {
+  color: #000;
+}
+
+/* ---- footer section ---- */
+
+footer {
+  height: 10vh;
+  background-color: #364e68;
+  padding: 2vh 0;
+}
+
+footer p {
+  font-size: 1.5rem;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+}
+
+@media all and (min-width: 992px) {
+  nav {
+    font-size: 2rem;
+  }
+
+  /* - - - - - Welcome & About - - - - - */
+
+  #welcome-section {
+    margin: 0 15vw;
+  }
+
+  .about-section {
+    margin: 5vh 15vw;
+  }
+
+  .services-image {
+    height: 300px;
+    width: 300px;
+  }
+
+  /* - - - - - Project - - - - - */
+
+  #project {
+    margin: 0 15vw;
+  }
+
+  .project-tile {
+    margin-left: 0;
+  }
+
+  /* - - - - - Form- - - - - */
+
+  .form-section {
+    margin: 15vh 20vw 0 20vw;
+    padding: 0 5vw;
+  }
+
+  form label,
+  form input[type="text"],
+  form textarea,
+  form button {
+    font-size: 16px;
+  }
+}

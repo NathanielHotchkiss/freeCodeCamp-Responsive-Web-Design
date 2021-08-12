@@ -1,0 +1,255 @@
+body {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+main {
+  overflow: scroll;
+  -webkit-scroll-snap-type: y mandatory;
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  -webkit-scroll-snap-align: start;
+  scroll-snap-align: start;
+  scroll-margin-top: 150px;
+}
+
+/* - - - - - - Header - - - - - - */
+
+header {
+  background-color: #457b9d;
+  position: sticky;
+  display: block;
+  top: 0;
+  z-index: 1;
+}
+
+header h1 {
+  font-family: "Roboto Condensed", sans-serif;
+  text-align: center;
+  font-size: 1.8rem;
+  color: #fff;
+  margin: 0;
+  padding-top: 2%;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul {
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 2vw 0 0;
+  transition: transform 500ms;
+  will-change: transform;
+}
+
+header nav ul li a:hover {
+  color: #fff;
+  text-decoration: none;
+  transform: translateY(5px);
+}
+
+header nav ul li:last-child a {
+  margin-right: 0;
+}
+
+#header-img {
+  height: 40px;
+  margin-top: -10px;
+}
+
+/* - - - - - - Products - - - - - - */
+
+.section-title {
+  font-family: "Staatliches", cursive;
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 1rem 0;
+}
+
+.products {
+  margin: 5%;
+}
+
+.card {
+  width: 100%;
+  margin-bottom: 2rem;
+  transition: transform 500ms;
+  will-change: transform;
+}
+
+.card:hover {
+  transform: translateY(5px);
+}
+
+.col {
+  margin: 0 auto;
+}
+
+/* - - - - - - About - - - - - - */
+
+.about {
+  padding: 0 5% 10% 5%;
+}
+
+.about p {
+  padding-top: 5%;
+}
+
+iframe {
+  border: none;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  min-height: 200px;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: col;
+}
+
+.about .btn {
+  background-color: #457b9d;
+  margin: 1%;
+  text-align: center;
+  width: 200px;
+}
+
+/* - - - - - - Newsletter - - - - - - */
+
+.newsletter p {
+  text-align: center;
+}
+
+.form-container {
+  padding: 5% 15%;
+}
+
+fieldset {
+  border: 0;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.general {
+  width: 100%;
+  height: 1.5rem;
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+label {
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+#submit {
+  margin: 2rem 0 4rem 0;
+  width: 100%;
+  padding: 10px 16px;
+  border: 0;
+  font-size: 20px;
+  background: #222831;
+  color: #fff;
+}
+
+/* - - - - - - Footer - - - - - - */
+
+footer {
+  overflow: hidden;
+  background-color: #457b9d;
+  margin: 0;
+  height: auto;
+}
+
+footer ul {
+  padding: 5% 20%;
+  list-style: none;
+  line-height: 1.2rem;
+}
+
+footer ul li:first-child {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+footer ul li {
+  color: white;
+}
+
+footer ul li a,
+footer ul li a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+footer p {
+  font-family: "Roboto Condensed", sans-serif;
+  color: #fff;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 992px) {
+  header h1 {
+    font-size: 3rem;
+    padding-top: 2vh;
+  }
+
+  .section-title {
+    font-size: 4rem;
+    margin: 2rem 0;
+  }
+
+  .about {
+    padding: 0 10% 10% 10%;
+  }
+
+  .form-container {
+    padding: 2% 35%;
+  }
+
+  .about p {
+    padding-top: 0;
+  }
+
+  .buttons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .about .btn {
+    background-color: #457b9d;
+    margin-top: 5%;
+    text-align: center;
+    width: 200px;
+  }
+
+  iframe {
+    min-height: 300px;
+  }
+
+  footer {
+    padding: 0 20%;
+  }
+
+  footer ul {
+    line-height: 1.5rem;
+  }
+
+  footer li {
+    margin-left: 30%;
+  }
+}

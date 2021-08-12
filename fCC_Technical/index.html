@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>fCC Technical Page</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <main id="main-doc">
+        <nav id="navbar">
+            <header>
+                <h1>JavaScript and the DOM</h1>
+            </header>
+            <ul id="nav-ul">
+                <li>
+                    <a class="nav-link" href="#Why_use_JavaScript?">Why use JavaScript?</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#The_&lt;script&gt;_tag">The &lt;script&gt; tag</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#Embedding_JavaScript">Embedding JavaScript</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#Document_Object_Model">Document Object Model</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#Accessing_the_DOM">Accessing the DOM</a>
+                </li>
+            </ul>
+        </nav>
+
+        <section class="main-section" id="Why_use_JavaScript?">
+            <header>
+                <h3>Why use JavaScript?</h3>
+            </header>
+
+            <p>JavaScript was originally designed to work with <code>HTML</code> on a web page. When applied to a web
+                page, JavaScript
+                is used to add some interactivity or to make the page more dynamic. You may have seen websites that use
+                JavaScript to do the following:</p>
+
+            <ul>
+                <li>Create animations</li>
+                <li>Respond to actions that the user performs</li>
+                <li>Validate user input on forms</li>
+                <li>Load data dynamically</li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="The_&lt;script&gt;_tag">
+            <header>
+                <h3>The &lt;script&gt; tag</h3>
+            </header>
+
+            <p>To include some JavaScript on a page, use the <code>HTML</code> <code>&lt;script&gt;</code> tag. The
+                <code>&lt;script&gt;</code> tag takes an attribute named <code>src</code>; this attribute specifies
+                the JavaScript file to be included.
+            </p>
+            <p>Here's an example:</p>
+
+            <pre><code>     &lt;script src="/path/to/your/script.js"&gt;&lt;/script&gt;</code></pre>
+
+            <p>If your browser happens across a <code>&lt;script&gt;</code> tag when it's rendering a requested web
+                page,
+                it will request the file and execute it immediately.</p>
+
+
+            <p>On your machine, create a new folder for a new project. In that folder, create two files named
+                index.html and index.js. The index.html file is a simple HTML page with a <code>&lt;script&gt;</code>
+                tag
+                referencing index.js. Copy the following code into the respective files.</p>
+
+            <p>Here's the code for the <code>index.html</code> file:</p>
+
+            <pre><code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="en"&gt;
+        &lt;head&gt;
+            &lt;meta charset="UTF-8" /&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+            &lt;title&gt;JavaScript on your page&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h1&gt;Welcome to my website&lt;/h1&gt;
+            &lt;script src="index.js"&gt;&lt;/script&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+                </pre></code>
+
+            <p>And here's the code for the <code>index.js</code> file:</p>
+
+            <pre><code>     console.log("Hello!");</code></pre>
+
+            <p>Once you've added the code to both files, open the HTML page in your browser and observe the console in
+                the developer tools. Notice that the JavaScript code is executed as the page loads.</p>
+
+        </section>
+
+        <section class="main-section" id="Embedding_JavaScript">
+            <header>
+                <h3>Embedding JavaScript</h3>
+            </header>
+
+            <p>In addition to linking to an external file, you can include JavaScript directly on the HTML page within
+                the <code>&lt;script&gt;</code> tags. </p>
+            <p>Here's an example:</p>
+
+            <pre><code>
+        &lt;script&gt;
+                console.log("This is embedded JavaScript");
+        &lt;script&gt;
+            </code></pre>
+
+            <p>But generally, it's best to avoid embedding JavaScript in an HTML page like this; it isn't a very
+                scalable solution.</p>
+        </section>
+
+        <section class="main-section" id="Document_Object_Model">
+            <header>
+                <h3>Document Object Model</h3>
+            </header>
+
+            <p>When your web page is loaded by the browser, it is parsed, and the browser constructs an internal
+                representation of the HTML. This facilitates the browser's interaction with the HTML. You can also use
+                JavaScript to interact with the HTML via this internal representation. This representation, which is
+                called the Document Object Model (DOM), is the data representation of the HTML elements that make up the
+                structure of a web page. The DOM is how the browser sees your HTML.</p>
+
+            <p>Consider the following simple HTML file:</p>
+
+            <pre><code>
+          &lt;html lang="en"&gt;
+            &lt;head&gt;
+              &lt;meta charset="UTF-8" /&gt;
+              &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+              &lt;title&gt;JavaScript on your page&lt;/title&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+              &lt;header&gt;
+                &lt;h1&gt;List of Parks&lt;/h1&gt;
+              &lt;/header&gt;
+              &lt;main&gt;
+                &lt;ul&gt;
+                  &lt;li&gt;Biscayne&lt;/li&gt;
+                  &lt;li&gt;Grand Canyon&lt;/li&gt;
+                  &lt;li&gt;Gateway Arch&lt;/li&gt;
+                  &lt;li&gt;Indiana Dunes&lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/main&gt;
+            &lt;/body&gt;
+          &lt;/html&gt;
+        </code></pre>
+
+            <p>Notice that the entire document is enclosed in the <code>&lt;html&gt;</code> element. The
+                <code>&lt;html&gt;</code> element is called the root of the DOM.
+            </p>
+
+            <p>Observing carefully, you can see that there are two elements directly inside the
+                <code>&lt;html&gt;</code> element: the <code>&lt;head&gt;</code> and the <code>&lt;body&gt;</code>.
+                These are called the children of the <code>&lt;html&gt;</code> element, and the
+                <code>&lt;html&gt;</code> element is the parent of these two elements.
+            </p>
+
+            <p>A parent element nests other elements. Elements that are nested inside another element are called the
+                children.</p>
+
+            <p>As you examine the HTML document further, you can see that the <code>&lt;body&gt;</code> element itself
+                also nests some elements. That is, <code>&lt;header&gt;</code> and <code>&lt;main&gt;</code> are
+                children of <code>&lt;body&gt;</code>. Additionally, the <code>&lt;h1&gt;</code> inside the
+                <code>&lt;header&gt;</code> is a child of the <code>&lt;header&gt;</code>. And <code>&lt;main&gt;</code>
+                contains a <code>&lt;ul&gt;</code>, which in turn contains four <code>&lt;li&gt;</code> elements. You
+                can also see that the <code>&lt;head&gt;</code> element has three children.
+            </p>
+
+            <p>You may have noticed that the structure of the DOM resembles a family tree, except that each child has a
+                single parent. The family tree terminology is used when talking about the relationships between the
+                elements of the DOM. You may refer to the parent of an element, the grandparent of an element, the
+                siblings of an element, and so on.</p>
+        </section>
+
+        <section class="main-section" id="Accessing_the_DOM">
+            <header>
+                <h3>Accessing the DOM</h3>
+            </header>
+
+            <p>The browser makes all of the page's HTML accessible via a global variable named <code>document</code>.
+                This variable is available to your JavaScript and contains a reference to the entire HTML document. You
+                can see this by logging the <code>document</code> variable and observing it in the console.</p>
+
+            <p>Finding an element with <code>querySelector()</code></p>
+
+            <p>Now that you have access to the entire HTML document, you can try to select some elements in the DOM. You
+                can use the built-in <code>querySelector()</code> method to search the DOM. The
+                <code>querySelector()</code> method accepts a string representing a CSS selector. Then it returns the
+                first element in the DOM that matches that selector.
+            </p>
+
+            <p>For example, to find an <code>&lt;h1&gt;</code> element on the page, you can use the following syntax:
+            </p>
+
+            <pre><code>
+        const heading = document.querySelector("h1");
+        console.log(heading);
+        </code></pre>
+
+
+            <p>The <code>querySelector()</code> method will traverse the DOM, starting from the root, and find the first
+                <code>&lt;h1&gt;</code> element.
+            </p>
+
+            <p>In the <code>querySelector()</code> example above, the string "h1" was used as a selector. What are some
+                of the other ways that you can specify selectors?</p>
+
+            <p>Well, there is a very simple rule: a selector is any valid CSS selector.</p>
+
+            <ul>
+                <li>Type Selector - h1, p, section</li>
+                <li>Class Selector - .container, .about</li>
+                <li>Id Selector - #main-img #footer-icon</li>
+            </ul>
+
+        </section>
+    </main>
+</body>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+</html>
