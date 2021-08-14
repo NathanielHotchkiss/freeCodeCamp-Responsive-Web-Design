@@ -1,6 +1,6 @@
 ## Link
 
-https://fcc-landing-murex.vercel.app/
+https://fcc-landing-product.vercel.app/
 
 ## User Stories
 
