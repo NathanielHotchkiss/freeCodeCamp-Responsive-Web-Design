@@ -1,6 +1,6 @@
 ## Link
 
-https://f-cc-technical.vercel.app/
+https://fcc-technical.vercel.app/
 
 ## User Stories
 
