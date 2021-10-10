@@ -5,7 +5,7 @@
 Links & User stories provided for each project.
 
 ## Future Goals
-Improve design skills to create more attractive websites/applications. 
+Improve visual design skills to create more attractive websites/applications. 
 
 ## Certificate
 https://freecodecamp.org/certification/nathanhotchkiss/responsive-web-design
