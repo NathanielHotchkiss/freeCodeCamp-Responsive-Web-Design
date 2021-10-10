@@ -5,13 +5,7 @@
 Links & User stories provided for each project.
 
 ## Future Goals
-
-While I am proud of these projects, I would like to improve the Personal Portfolio page and the Technical Documentation page in the future.
-
-## Takeaway
-
-While I feel very comfortable working with HTML/CSS, I really need to learn more about modern styles/trends.
+Improve design skills to create more attractive websites/applications. 
 
 ## Certificate
-
 https://freecodecamp.org/certification/nathanhotchkiss/responsive-web-design
